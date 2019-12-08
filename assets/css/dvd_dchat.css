@@ -1,0 +1,502 @@
+/* Reset */
+a,
+a:hover {
+    color: #594939;
+    text-decoration: none !important;
+}
+
+i {
+    font-style: normal !important;
+}
+
+/* ============================================ */
+/* Tombol  */
+
+
+/* Btn dchat Trigger */
+.btn__wrapper {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+
+    border-radius: 50%;
+    border-bottom-right-radius: 5px;
+    transition: all .1s;
+    z-index: 999999999;
+    visibility: visible;
+
+}
+
+.btn__wrapper.active {
+    transform: rotate(-90deg);
+    transition: all 0.5s;
+
+}
+
+.btn__wrapper.active .wrapper__circle .dchat_icon {
+    transform: rotate(-270deg);
+    opacity: 0;
+    transition: all 0.5s;
+    display: none;
+}
+
+.btn__wrapper .dchat_close {
+    display: none;
+}
+
+.btn__wrapper.active .dchat_close {
+    display: inline;
+}
+
+
+.btn__wrapper.init {
+    visibility: hidden;
+    transform: rotate(-90deg);
+    transition: all .1s;
+
+}
+
+.wrapper__circle {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    transition: transform 0.4s ease 0.2s;
+
+    /* background: #097CFF; */
+    background: linear-gradient(160deg, #e73a36, #960A0C);
+
+}
+
+.wrapper__circle svg {
+    width: 28px;
+    height: 32px;
+    transition: all 0.5s;
+
+
+}
+
+.wrapper__circle .dchat_icon svg path {
+    fill: rgb(255, 255, 255);
+
+}
+
+.wrapper__circle .dchat_close svg path {
+    fill: rgb(255, 255, 255);
+
+}
+
+/* END Btn dchat Trigger */
+
+/* ============================================================ */
+
+.main_dchat_wrapper {
+    z-index: 9999;
+    position: fixed;
+    bottom: 85px;
+    right: 15px;
+    /* visibility: hidden; */
+    opacity: 0;
+    transform: translateX(360px);
+    transition: all 3s ease;
+}
+
+.main_dchat_wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 3s ease;
+
+}
+
+.main_dchat_wrapper.active.min {
+    transition: all 3s ease;
+    animation: minimazeScale 1s;
+
+}
+
+.main_dchat_wrapper.min {
+    transition: all 3s ease;
+    animation: minimazeScale .8s;
+
+}
+
+.main_dchat_wrapper.max {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease;
+    transform: translateX(0px);
+
+    /* transform: translate(53px, 51px)skewX(-26deg) scale(1); */
+
+    animation: maximaze .2s;
+}
+
+@keyframes maximaze {
+    0% {
+        visibility: visible;
+        transform: translate(53px, 51px)skewX(28deg) scale(1);
+        /* transform: scale(); */
+
+    }
+
+    100% {
+        /* transform: scale(); */
+        transform: translate(0px, 0px)skewX(0deg);
+
+    }
+}
+
+@keyframes minimazeScale {
+    0% {
+        opacity: 0.5;
+        transform: skew(10deg, 10deg) translate(-40px, 15px);
+    }
+
+    60% {
+        transform: translateY(-85px)skewX(20deg) scale(0);
+        opacity: 0;
+    }
+
+
+    100% {
+        visibility: hidden;
+
+
+    }
+}
+
+.main_dchat_wrapper .main_dchat_body {
+    background-color: #fff;
+    /* Rectangle: */
+    box-shadow: 0 2px 40px 0 rgba(43, 132, 210, 0.41);
+    border-radius: 15px;
+    width: 330px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main_dchat_body .dchat_header {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 0; */
+    word-wrap: break-word;
+    background-clip: border-box;
+    background: linear-gradient(160deg, #e73a36, #960A0C);
+
+
+    box-shadow: 0 1px 10px #9e9e9e;
+    border-radius: 10px;
+}
+
+.dchat_header::before {
+    content: "\f24e";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    line-height: 50px;
+    font-family: fontAwesome;
+    font-size: 124px;
+    color: #e23833;
+    opacity: .3;
+
+    margin-top: 33px;
+
+}
+
+.dchat_header.small::before {
+    margin-top: 3px;
+
+}
+
+.main_dchat_body .dchat_header.small {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.user_content {
+    display: flex;
+    padding: 15px;
+    z-index: 1;
+
+}
+
+
+.dchat_header .user_content img {
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+    border-radius: 50%;
+    transition: all .3s;
+
+}
+
+.dchat_header.small .user_content img {
+    width: 60px;
+    height: 60px;
+    transition: all .3s;
+
+}
+
+.user_content .details {
+    width: 100%;
+}
+
+.details .btn__details {
+    display: flex;
+    flex: 0 0 auto;
+    height: 16px;
+    margin: -5px -5px auto 6px;
+    justify-content: flex-end;
+    ;
+}
+
+.btn__details .R_btn {
+    padding: 0 6px 0;
+    color: #fff;
+    opacity: .5;
+    transition: all .3s;
+
+}
+
+.R_btn:hover {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.R_btn:nth-child(2):hover {
+    opacity: 1;
+    color: #333;
+    transition: all .3s;
+}
+
+
+.dchat_header.small .details h5 {
+    margin: 0;
+    transition: all .5s;
+
+}
+
+.details h5 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 15px 0 0;
+    transition: all .5s;
+
+}
+
+.details p {
+    color: #ffcc00;
+    font-size: 13.5px !important;
+    margin: 0 0;
+    /* letter-spacing: 2.5px; */
+}
+
+/* Message Box */
+.main_dchat_body .dchat_messages_box {
+
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    max-height: 250px;
+}
+
+.dchat_messages_box.pd_20 {
+    padding: 20px;
+    transition: all .5s;
+
+}
+
+.dchat_messages_box.active {
+
+    height: 300px;
+    transition: all 1s;
+
+}
+
+.message {
+    margin-bottom: 12px;
+}
+
+.message.send {
+    text-align: right;
+}
+
+.message-content {
+    color: #594939;
+    padding: 10px 20px;
+    background-color: #fd9e1d38;
+    border-radius: 20px 20px 20px 0px;
+    max-width: 80%;
+    display: inline-block;
+    text-align: left;
+
+    /* untuk membuat panjang paragraf menyesuaikan box (turun) */
+    overflow-wrap: break-word;
+}
+
+/* Post gambar */
+.message-content img {
+    width: 90%;
+    margin: 5px 10px;
+}
+
+.message.send .message-content {
+    border-radius: 20px 20px 0px 20px;
+    background-color: #e2efff;
+    color: #2A4E7F;
+}
+
+.main_dchat_body .dchat_controls {
+    padding: 10px;
+}
+
+/* ====================================================== */
+
+
+/* Form controls */
+.dchat__controls {
+    padding: 10px 15px;
+    transform: translateY(100px);
+    /* display: none; */
+    visibility: hidden;
+    transition: all 1s;
+    margin-top: -105px;
+}
+
+.dchat__controls.show {
+    transform: translateY(0px);
+    /* display: block; */
+    visibility: visible;
+
+    transition: all 1s;
+    margin-top: 0px;
+
+}
+
+.input-group {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 30px !important;
+
+    overflow: hidden;
+
+}
+
+.input-group-append {
+    margin-right: -50px;
+    transition: all .2s;
+}
+
+.input-group-append.show {
+    margin-right: 0px;
+    transition: all .2s;
+}
+
+.form-control {
+    border-radius: 30px !important;
+    /* width: 100% !important; */
+    height: 43px;
+    border: none !important;
+    background: transparent;
+
+
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+
+
+.input-group-text {
+    border-radius: 50% !important;
+    background: #eee !important;
+    border: 2px solid #fff;
+    cursor: pointer;
+
+}
+
+.input-group-text .fa {
+    color: #6c757d;
+
+}
+
+.input-group-text:hover .fa {
+    color: #6c757d;
+    transition: ease .3s;
+}
+
+/* background: #eee;
+color: #6c757d; */
+
+
+/* Button Extra */
+.dchat__controls .dchat_btn_extra {
+    display: flex;
+    min-height: 28px;
+    position: relative;
+    padding-top: 8px;
+}
+
+.R_btn_extra {
+    display: flex;
+    /* justify-content: space-between; */
+    min-width: 1px;
+    width: 100%;
+    /* border: 1px solid rgb(207, 14, 14); */
+}
+
+.R_btn_extra a {
+    padding: 0 6px 0;
+    color: #333;
+    font-size: 16px;
+
+    opacity: .5;
+    transition: all .3s;
+
+}
+
+.R_btn_extra a:hover {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.L_btn_extra {
+    display: flex;
+    flex: 0 0 auto;
+    /* height: 16px; */
+    /* margin: 6px 0 auto 6px; */
+}
+
+.L_btn_extra a {
+    padding: 0 6px 0;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all .3s;
+
+}
+
+.L_btn_extra a:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+
+}
