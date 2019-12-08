@@ -1,18 +1,18 @@
 $(document).ready(function () {
     let kunjungan = getCookie('lastVisited');
 
-    kunjungan == '' ? console.log('kos') : console.log('ada');;
+    // kunjungan == '' ? console.log('kos') : console.log('ada');;
 
     let nav_links = $('.rd-navbar-nav li');
 
-    console.log(getCookie('lastVisited'));
+    // console.log(getCookie('lastVisited'));
     // console.log(nav_links.innerText);
 
     for (let i = 0; i <= nav_links.length; i++) {
         let menu_txt = nav_links[i];
 
         // console.log(menu_txt.innerText);
-        if (menu_txt.innerText == getCookie('lastVisited')) {
+        if ($('.rd-navbar-nav li').innerText == getCookie('lastVisited')) {
             nav_links[i].click();
             // clickedMenu(nav_links[i], menu_txt)
 

@@ -173,13 +173,12 @@ $(function () {
         let WA_Qr = `
                 <div class="message">
                     <div class="message-content">
-                    <a target="_blank" class="img-thumbnail-variant-1" href="./assets/images/WA_qr_code/qr_WA-700px.png"
-                    data-lightgallery="item">
-                    <figure>
-                        <img src="./assets/images/WA_qr_code/qr_WA-700px.png" alt="" width="886" height="668" />
-                    </figure>
-
-                </a>
+                        <a class="img-thumbnail-variant-1" href="./assets/images/WA_qr_code/qr_WA-700px.png"
+                            data-lightgallery="item">
+                            <figure>
+                                <img src="./assets/images/WA_qr_code/qr_WA-700px.png" alt="" width="886" height="668" />
+                            </figure>
+                        </a>
 
                         Silahkan click & scan QR code diatas agar terhubung langsung dengan kami melalui
                         WhatsAPP (WA) di handphone Anda.
@@ -209,7 +208,7 @@ $(function () {
         setTimeout(() => {
 
 
-            $('.dchat_messages_box').append(WA_Qr);
+            $('.dchat_messages_box').append($.trim(WA_Qr));
             notifSound();
             updateScroll();
             setTimeout(() => {
