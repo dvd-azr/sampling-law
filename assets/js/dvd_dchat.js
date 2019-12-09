@@ -173,12 +173,13 @@ $(function () {
         let WA_Qr = `
                 <div class="message">
                     <div class="message-content">
-                        <a class="img-thumbnail-variant-1" href="./assets/images/WA_qr_code/qr_WA-700px.png"
+                        <span class="img-thumbnail-variant-1" href="./assets/images/WA_qr_code/qr_WA-700px.png"
                             data-lightgallery="item">
                             <figure>
                                 <img src="./assets/images/WA_qr_code/qr_WA-700px.png" alt="" width="886" height="668" />
                             </figure>
-                        </a>
+
+                        </span>
 
                         Silahkan click & scan QR code diatas agar terhubung langsung dengan kami melalui
                         WhatsAPP (WA) di handphone Anda.
