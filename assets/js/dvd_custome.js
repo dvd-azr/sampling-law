@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     let kunjungan = getCookie('lastVisited');
 
     // kunjungan == '' ? console.log('kos') : console.log('ada');;
@@ -11,8 +12,8 @@ $(document).ready(function () {
     for (let i = 0; i <= nav_links.length; i++) {
         let menu_txt = nav_links[i];
 
-        // console.log(menu_txt.innerText);
-        if ($('.rd-navbar-nav li').innerText == getCookie('lastVisited')) {
+        if (nav_links[i].innerText == getCookie('lastVisited')) {
+            console.log(menu_txt.firstChild);
             nav_links[i].click();
             // clickedMenu(nav_links[i], menu_txt)
 

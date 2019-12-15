@@ -11455,7 +11455,10 @@ html.rd-navbar-fixed-linked .page {
 
 .parallax-container {
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+
+
+
 }
 
 .material-parallax {
@@ -11463,7 +11466,11 @@ html.rd-navbar-fixed-linked .page {
     top: 0;
     left: -1px;
     right: -1px;
-    bottom: 0
+    bottom: 0;
+
+
+
+
 }
 
 .ipad .parallax-container,
@@ -11478,7 +11485,12 @@ html.rd-navbar-fixed-linked .page {
     bottom: 0;
     min-width: 101%;
     min-height: 101%;
-    transform: translate3d(-50%, 0, 0)
+    transform: translate3d(-50%, 0, 0);
+
+
+    /* DVD: tambahan */
+    background-position: center;
+    background-size: cover;
 }
 
 .parallax-content {
@@ -11618,7 +11630,9 @@ html.rd-navbar-fixed-linked .page {
     border: 1px solid #ececee;
     border-radius: 0 0 3px 3px;
     color: #181d26;
-    background: #fff
+    background: #fff;
+
+
 }
 
 .rd-search-results-live p {
@@ -12633,9 +12647,11 @@ html.rd-navbar-fixed-linked .page {
     }
 }
 
-/* DVD: biar bisa menyesuaikan */
+/* DVD: biar bisa menyesuaikan Saat Ukuran layar Besar*/
 .swiper-slider_fullheight {
     /* min-height: calc(100vh - 56px); */
+    min-height: calc(100vh - 140.984px);
+
     height: auto
 }
 
@@ -18583,4 +18599,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 :root {
     --primary-color: #cca776;
+    --primary-blue: #186C7E;
+    --primary-red: #96210c;
+
 }

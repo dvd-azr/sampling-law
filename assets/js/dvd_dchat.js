@@ -2,7 +2,20 @@ $(function () {
 
     console.log("init dChat");
 
-    $('.main_dchat_wrapper').addClass('active');
+    setTimeout(function () {
+
+        $('.main_dchat_wrapper').addClass('active');
+        setTimeout(() => {
+
+            setTimeout(function () {
+                SapaPembuka();
+                setTimeout(() => {
+                    tawaran();
+                }, 5000)
+            }, 7000);
+
+        }, 5000);
+    }, 5000)
 
     // inisialisasi perfectScrollBar pada chat-body
     $('.main_dchat_body .dchat_messages_box').perfectScrollbar();
@@ -13,12 +26,7 @@ $(function () {
         audio.play();
     };
 
-    setTimeout(function () {
-        SapaPembuka();
-        setTimeout(() => {
-            tawaran();
-        }, 5000)
-    }, 7000)
+
 
 
 
@@ -81,13 +89,14 @@ $(function () {
         // menangani saat max
         if (main_dchat.hasClass('max')) {
             main_dchat.toggleClass('max').toggleClass("min");
-            $('.btn__wrapper').toggleClass('active');
+            $('.dchat_btn__wrapper').toggleClass('active');
         }
 
         setTimeout(() => {
             $('.main_dchat_wrapper.active').removeClass('active')
         }, 500);
-        $('.btn__wrapper.init').removeClass('init').css({
+
+        $('.dchat_btn__wrapper.init').removeClass('init').css({
             // "transform": 'scale()',
             "visibility": "visible",
             "transition": "0.2s"
@@ -225,7 +234,7 @@ $(function () {
 
 
     // Tombol Chat
-    $('.btn__wrapper').click(function () {
+    $('.dchat_btn__wrapper').click(function () {
         $(this).toggleClass('active');
         // console.log($(this));
 

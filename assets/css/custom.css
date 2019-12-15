@@ -6,6 +6,13 @@ body {
 /* Scroll Bar */
 ::-webkit-scrollbar {
     width: 6px;
+    transition: all .3s;
+}
+
+::-webkit-scrollbar:hover {
+    width: 10px;
+    transition: all .3s;
+
 }
 
 ::-webkit-scrollbar-track {
@@ -14,10 +21,13 @@ body {
 
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: #e73a36;
-    border-radius: 25px;
-}
 
+    background: #cca776;
+    /* background: linear-gradient(to top, #e73a36, #96210c, #e73a36) !important; */
+    border-radius: 25px;
+    cursor: pointer;
+
+}
 
 
 .wrapper__page {
@@ -107,6 +117,10 @@ body {
 
         font-size: 11px !important;
     }
+
+    .swiper-slider_fullheight {
+        min-height: calc(360px - 56px) !important
+    }
 }
 
 @media (min-width: 768px) {
@@ -114,6 +128,12 @@ body {
 
         font-size: 14px !important;
     }
+
+    /* Iphone x lanscape */
+    .swiper-slider_fullheight {
+        min-height: calc(375px - 56px) !important
+    }
+
 }
 
 @media (min-width: 990px) {
@@ -121,6 +141,11 @@ body {
 
         font-size: 24px !important;
     }
+
+    .swiper-slider_fullheight {
+        min-height: calc(100vh - 140.984px) !important;
+    }
+
 }
 
 .first-letter {
@@ -350,13 +375,20 @@ body {
 /* Bootstrap Tabs */
 .tabs-custom .nav-custom-tabs li a {
     background-color: #fff;
-    color: #000;
+    /* color: red; */
+    color: var(--primary-color);
+
+}
+
+.tabs-custom .nav-custom-tabs a:hover {
+    color: #AC8F00 !important;
 }
 
 /* .tabs-custom .nav-custom-tabs a:hover, */
 .tabs-custom .nav-custom-tabs a.active {
     background-color: #fff;
-    color: var(--primary-color);
+    /* color: #96210c !important; */
+    color: var(--primary-blue) !important;
 
     border: 1px solid #ececee;
     border-bottom: #fff;
@@ -415,4 +447,9 @@ body {
         /* padding: 100px 0 !important; */
         background: #960A0C !important;
     }
+}
+
+
+.post-minimal img {
+    border-radius: 5px;
 }

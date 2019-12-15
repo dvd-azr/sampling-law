@@ -14,7 +14,7 @@ i {
 
 
 /* Btn dchat Trigger */
-.btn__wrapper {
+.dchat_btn__wrapper {
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -34,29 +34,29 @@ i {
 
 }
 
-.btn__wrapper.active {
+.dchat_btn__wrapper.active {
     transform: rotate(-90deg);
     transition: all 0.5s;
 
 }
 
-.btn__wrapper.active .wrapper__circle .dchat_icon {
+.dchat_btn__wrapper.active .wrapper__circle .dchat_icon {
     transform: rotate(-270deg);
     opacity: 0;
     transition: all 0.5s;
     display: none;
 }
 
-.btn__wrapper .dchat_close {
+.dchat_btn__wrapper .dchat_close {
     display: none;
 }
 
-.btn__wrapper.active .dchat_close {
+.dchat_btn__wrapper.active .dchat_close {
     display: inline;
 }
 
 
-.btn__wrapper.init {
+.dchat_btn__wrapper.init {
     visibility: hidden;
     transform: rotate(-90deg);
     transition: all .1s;
@@ -192,6 +192,8 @@ i {
 
 .main_dchat_body .dchat_header {
 
+
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -260,6 +262,7 @@ i {
 }
 
 .details .btn__details {
+
     display: flex;
     flex: 0 0 auto;
     height: 16px;
@@ -295,6 +298,7 @@ i {
 }
 
 .details h5 {
+    font-family: libre franklin, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif !important;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
