@@ -21,9 +21,13 @@ body {
 
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb:window-inactive {
+<<<<<<< HEAD
 
     background: #cca776;
     /* background: linear-gradient(to top, #e73a36, #96210c, #e73a36) !important; */
+=======
+    background: #cca776;
+>>>>>>> a4780e2cc2870844df514b8ba4000cada2ee2e03
     border-radius: 25px;
     cursor: pointer;
 
@@ -448,8 +452,11 @@ body {
         background: #960A0C !important;
     }
 }
+<<<<<<< HEAD
 
 
 .post-minimal img {
     border-radius: 5px;
 }
+=======
+>>>>>>> a4780e2cc2870844df514b8ba4000cada2ee2e03
