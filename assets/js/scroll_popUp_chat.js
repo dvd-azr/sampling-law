@@ -328,13 +328,13 @@ function contactsReply() {
     let WA_Qr = `
             <div class="message">
                 <div class="message-content">
-                    <span class="img-thumbnail-variant-1" href="./assets/images/WA_qr_code/qr_WA-700px.png"
+                    <a target="_blank" class="img-thumbnail-variant-1" href="./assets/images/WA_qr_code/qr_WA-700px.png"
                         data-lightgallery="item">
                         <figure>
-                            <img src="./assets/images/WA_qr_code/qr_WA-700px.png" alt="" width="886" height="668" />
+                            <img class="img-thumbnail" src="./assets/images/WA_qr_code/qr_WA-700px.png" alt="" width="886" height="668" />
                         </figure>
 
-                    </span>
+                    </a>
 
                     Silahkan click & scan QR code diatas agar terhubung langsung dengan kami melalui
                     WhatsAPP (WA) di handphone Anda.
